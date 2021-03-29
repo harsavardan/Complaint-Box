@@ -1,0 +1,329 @@
+<html>
+<div lang="en">
+
+    <head>
+        <meta charset=" utf-8 ">
+        <meta name="viewport " content="width=device-width, initial-scale=1 ">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet " href="bootstrap4\bootstrap-4.3.1-dist\css\bootstrap.min.css ">
+        <link rel="stylesheet" href="styless.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="c.png">
+        <title>Complaint Box</title>
+        <nav class="navbar fixed-top scrolling-navbar">
+            <img class="img-fluid" alt="Responsive image" src="c.png" style="height: 35px;width: 35px;">
+            <h4 class="text-white">Complaint Box</h4>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+</div>
+</head>
+
+<div>
+    <div>
+        <div class="slide">
+            <div id="container-fluid">
+                <div id="carousel-blog" class="carousel slide carousel-fade" style="width:100%;height:600px;" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-blog" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-blog-2" data-slide-to="1"></li>
+                        <li data-target="#carousel-blog-2" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="view">
+                                <img style="height:750px;width:100%" src="comp.jpg" alt="First slide">
+                                <div class="mask rgba-black-light"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive text-dark">File All Your Complaints Digitally</h3>
+                                <p class="text-black-50">We Will Solve Those!!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="view">
+                                <img style="height:750px;width:100%" src="proc.jpg" alt="Second slide">
+                                <div class="mask rgba-black-strong"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Complaints Will be Processed Faster</h3>
+                                <p>Just Trust US!!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="view">
+                                <img style="height:750px;width:100%" src="work.jpg" alt="Third slide">
+                                <div class="mask rgba-black-slight"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">We Will Solve In Time</h3>
+                                <p>Without Any Disturbances!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-blog" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-blog" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <hr>
+    <center>
+        <h3>FILE</h3>
+    </center>
+    <hr>
+    <div class="container-fluid">
+        <div class="card-deck pt-5">
+            <div class="card">
+                <img style="height:325px" class="card-img-top" src="wa.jpg" alt="Tap">
+                <div class="card-body">
+                    <h5 class="card-title">WATER RELATED COMPLAINTS</h5>
+                    <p class="card-text">File all your water related complaints of your area here!!</p>
+                    <button type="button" class="btn btn-outline-dark" data-toggle='modal' data-target="#warningwater">File</button>
+                    <p class="card-text"><small class="text-muted">-Water Resources Department of Tamil Nadu</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img style="height:325px" class="card-img-top" src="road.jpg" alt="Road">
+                <div class="card-body">
+                    <h5 class="card-title">ROAD RELATED COMPLAINTS</h5>
+                    <p class="card-text">File all your road related complaints of your area here!!</p>
+                    <button type="button" class="btn btn-outline-dark" data-toggle='modal' data-target="#warningroad">File</button>
+                    <p class="card-text"><small class="text-muted">-Highways & Minor Ports Department of Tamil Nadu</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck pt-5 pb-5">
+            <div class="card">
+                <img class="card-img-top" style="height:325px" src="el.jpg" alt="Light Bulbs">
+                <div class="card-body">
+                    <h5 class="card-title">ELECTRICITY RELATED COMPLAINTS</h5>
+                    <p class="card-text">File all your electricity related complaints of your area here!!</p>
+                    <button type="button" class="btn btn-outline-dark" data-toggle='modal' data-target="#warningelec">File</button>
+                    <p class="card-text"><small class="text-muted">-Energy Department of Tamil Nadu</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" style="height:325px" src="dr.jpg" alt="Light Bulbs">
+                <div class="card-body">
+                    <h5 class="card-title">DRAINAGE RELATED COMPLAINTS</h5>
+                    <p class="card-text">File all your drainage related complaints of your area here!!</p>
+                    <button type="button" class="btn btn-outline-dark" data-toggle='modal' data-target="#warningdrain">File</button>
+                    <p class="card-text"><small class="text-muted">- Public Works Department of Tamil Nadu</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="warningwater" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="warningtitle">
+                        <h4>Things To Be Aware Before Filling The Forms!!</h4>
+                        <div class="modal-body">
+                            <div class="notice notice-success">
+                                <strong>1.</strong>The details what you fill is what we get.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>2.</strong>Be Precise.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>3.</strong>The forms are easy to fill and is user friendly.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>4.</strong>Vanakam dii maaple
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">I will File Later</button>
+                            <a href=""><button type="button" class="btn btn-primary" data-target="home.html">Continue to File</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="warningroad" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="warningtitle">
+                        <h4>Things To Be Aware Before Filling The Forms!!</h4>
+                        <div class="modal-body">
+                            <div class="notice notice-success">
+                                <strong>1.</strong>The details what you fill is what we get.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>2.</strong>Be Precise.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>3.</strong>The forms are easy to fill and is user friendly.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>4.</strong>Vanakam dii maaple
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">I will File Later</button>
+                            <a href="home.html"><button type="button" class="btn btn-primary" data-target="home.html">Continue to File</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="warningelec" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="warningtitle">
+                        <h4>Things To Be Aware Before Filling The Forms!!</h4>
+                        <div class="modal-body">
+                            <div class="notice notice-success">
+                                <strong>1.</strong>The details what you fill is what we get.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>2.</strong>Be Precise.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>3.</strong>The forms are easy to fill and is user friendly.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>4.</strong>Vanakam dii maaple
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">I will File Later</button>
+                            <a href="forms and map\form.html"><button type="button" class="btn btn-primary" data-target="home.html">Continue to File</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="warningdrain" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="warningtitle">
+                        <h4>Things To Be Aware Before Filling The Forms!!</h4>
+                        <div class="modal-body">
+                            <div class="notice notice-success">
+                                <strong>1.</strong>The details what you fill is what we get.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>2.</strong>Be Precise.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>3.</strong>The forms are easy to fill and is user friendly.
+                            </div>
+                            <div class="notice notice-success">
+                                <strong>4.</strong>Vanakam dii maaple
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">I will File Later</button>
+                            <a href="home.html"><button type="button" class="btn btn-primary" data-target="home.html">Continue to File</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <footer>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                        <ul class="adress">
+                            <span>Address</span>
+                            <li>
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Kongu Engineering College,Perundurai</p>
+                            </li>
+
+                            <li>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i> +91 9445315699 </p>
+
+                            </li>
+
+                            <li>
+                                <p><i class="fa fa-envelope" aria-hidden="true"></i> complaint.box@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <ul class="contact">
+                            <span>Know More About</span>
+                            <li>
+                                <i class="fa fa-tint" aria-hidden="true"></i> <a href="http://www.wrd.tn.gov.in/">Water Resources Department of Tamil Nadu</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-road" aria-hidden="true"></i> <a href="https://www.tn.gov.in/department/13">Highways & Minor Ports Department of Tamil Nadu</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-bolt" aria-hidden="true"></i> <a href="https://www.tn.gov.in/department/7">Energy Department of Tamil Nadu</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-trash" aria-hidden="true"></i> <a href="http://www.tn.gov.in/department/42"> Public Works Department of Tamil Nadu</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <ul class="social">
+                            <span>Social</span>
+                            <li>
+                                <i class="fa fa-instagram"></i><a href="#">Abandon3d_one</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-facebook fa-2x"></i> <a href="#">its_you_and_me</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-twitter fa-2x"></i><a href="#">Abandon3d_one</i></a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-chrome fa-2x"></i><a href="file:///C:/ProjectExpo/NEW/home.html">Complaint_Box</a>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-google fa-2x"></i><a href="#">harithaharry001@gmail.com</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+</body>
+
+</html>

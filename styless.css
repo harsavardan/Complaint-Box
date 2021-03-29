@@ -1,0 +1,158 @@
+.navbar {
+    background-color: black;
+    ;
+}
+
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
+}
+
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+
+.notice-success {
+    border-color: #80D651;
+}
+
+.notice-success>strong {
+    color: #80D651;
+}
+
+.notice-brown {
+    border-color: brown;
+}
+
+.notice-black {
+    border-color: black;
+}
+
+.notice-info {
+    border-color: #45ABCD;
+}
+
+.notice-info>strong {
+    color: #45ABCD;
+}
+
+.notice-warning {
+    border-color: #FEAF20;
+}
+
+.notice-warning>strong {
+    color: #FEAF20;
+}
+
+.notice-danger {
+    border-color: #d73814;
+}
+
+.notice-danger>strong {
+    color: #d73814;
+}
+
+footer {
+    background-color: rgba(24, 23, 23, 0.781);
+    padding: 70px 0px;
+}
+
+footer ul li {
+    padding: 5px 0px;
+}
+
+.adress span,
+.contact span,
+.social span {
+    color: #FFF;
+    font-weight: 800;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.adress li p,
+.contact li a,
+.social li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+footer li a:hover {
+    font-size: 14px;
+}
+
+.social li {
+    float: left;
+}
+
+.adress,
+.contact,
+.social {
+    list-style: none;
+}
+
+.fa {
+    color: #9c9c9c;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.slide p {
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    animation-iteration-count: once;
+}
+
+hr {
+    border-color: gray;
+    border-width: 2px;
+}
+
+.card {
+    height: 550px;
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -100px;
+    }
+    50% {
+        margin-left: 300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
+
+.slide h3 {
+    animation-duration: 1.5s;
+    animation-name: slidein1;
+    animation-iteration-count: once;
+}
+
+@keyframes slidein1 {
+    0% {
+        margin-left: 0%;
+    }
+    50% {
+        margin-left: 300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
