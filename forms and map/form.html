@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem Complaint Form</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            color: #333;
+        }
+        
+        .tab-pane {
+            padding: 10px;
+        }
+        
+        .tab-control .previous-button,
+        .tab-control .next-button {
+            position: absolute;
+            top: 380px;
+        }
+        
+        .tab-control .previous-button {
+            left: 10%;
+        }
+        
+        .tab-control .next-button {
+            right: 10%;
+        }
+        
+        .wiz {
+            margin: 0px auto;
+            background: #fff;
+        }
+        
+        .wiz .nav-tabs {
+            position: relative;
+            margin: 0px auto;
+            margin-bottom: 0;
+            border-bottom-color: #e0e0e0;
+        }
+        
+        .wiz>div.wiz-in {
+            position: relative;
+        }
+        
+        .connecting-line {
+            height: 2px;
+            background: #e0e0e0;
+            position: absolute;
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: 50%;
+            z-index: 1;
+        }
+        
+        .wiz .nav-tabs>li.active>a,
+        .wiz .nav-tabs>li.active>a:hover,
+        .wiz .nav-tabs>li.active>a:focus {
+            color: #555555;
+            cursor: default;
+            border: 0;
+            border-bottom-color: transparent;
+        }
+        
+        span.round-tab {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            border-radius: 100px;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            z-index: 2;
+            position: absolute;
+            left: 0;
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        span.round-tab i {
+            color: #555555;
+        }
+        
+        .wiz li.active span.round-tab {
+            background: #fff;
+            border: 2px solid #5bc0de;
+        }
+        
+        .wiz li.active span.round-tab i {
+            color: #5bc0de;
+        }
+        
+        span.round-tab:hover {
+            color: #333;
+            border: 2px solid #333;
+        }
+        
+        .wiz .nav-tabs>li {
+            width: 25%;
+        }
+        
+        .wiz li:after {
+            content: " ";
+            position: absolute;
+            left: 46%;
+            opacity: 0;
+            margin: 0 auto;
+            bottom: 0px;
+            border: 5px solid transparent;
+            border-bottom-color: #5bc0de;
+            transition: 0.1s ease-in-out;
+        }
+        
+        .wiz li.active:after {
+            content: " ";
+            position: absolute;
+            left: 46%;
+            opacity: 1;
+            margin: 0 auto;
+            bottom: 0px;
+            border: 10px solid transparent;
+            border-bottom-color: #5bc0de;
+        }
+        
+        .wiz .nav-tabs>li a {
+            width: 50px;
+            height: 50px;
+            margin: 20px auto;
+            border-radius: 100%;
+            padding: 0;
+        }
+        
+        .wiz .nav-tabs>li a:hover {
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid text-center " style="background-color: #5bc0de;">
+        <h1 class="display-4 ">Problems Complaint Form</h1>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 product-tabs wiz">
+                <div class="wiz-in">
+                    <div class="connecting-line"></div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active">
+                            <a href="#tab1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                                <span class="round-tab">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#tab2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                                <span class="round-tab">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#tab3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                                <span class="round-tab">
+                                <i class="glyphicon glyphicon-picture"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#tab4" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                                <span class="round-tab">
+                                <i class="glyphicon glyphicon-ok"></i>
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="http://localhost:7780/submit" method="POST">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <h3>Step - 1</h3>
+                            <div class="form-group">
+                                <label for="h1">Name </label>
+                                <input type="text" class="form-control" id="h1" name="g1" placeholder="Firstname & Lastname">
+                            </div>
+                            <div class="form-group">
+                                <label for="h2">Email </label>
+                                <input type="email" class="form-control" id="h2" name="g2" placeholder="@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="h3">Phone Number </label>
+                                <input type="text" class="form-control" id="h3" name="g3" placeholder="Enter 10 Digit Mobile Number">
+                            </div>
+                            <div class="tab-control">
+                                <a class="next-button btn btn-info" role="button">Next</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <h3>Step - 2</h3>
+                            <div class="form-group">
+                                <label for="h4">Address </label>
+                                <input type="text" class="form-control" id="h4" name="g4" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group">
+                                <label for="h5">District </label>
+                                <input type="text" class="form-control" id="h5" name="g5" placeholder="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="h6">Pincode </label>
+                                <input type="text" class="form-control" id="h6" name="g6" placeholder="Your District Pincode">
+                            </div>
+                            <div class="tab-control">
+                                <a class="previous-button btn btn-info" role="button">Previous</a>
+                                <a class="next-button btn btn-info" role="button">Next</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <h3>Step - 3</h3>
+                            <div class="form-group " id="third">
+                                <div class="row">
+                                    <label for="prob" class="hed">What is Your Problem?</label>
+                                    <select class="form-control mb-3" name="problem" id="prob">
+                                      <option selected value="no">Choose your Problem</option>
+                                      <option value="No Power Supply">No Power Supply</option>
+                                      <option value="Generic Complaints">Generic Complaints</option>
+                                      <option value="Line Related">Line Related</option>
+                                      <option value="Pole Related">Pole Related</option>
+                                      <option value="Transformer Related">Transformer Related</option>
+                                   </select>
+                                </div>
+
+                                <div class="row" id="third-1">
+                                    <label for="power" class="hed">No Power Supply</label>
+                                    <select class="form-control mb-3" name="power" id="power">
+                                      <option selected>Choose your Problem</option>
+                                      <option value="OVERHEAD LINE/CABLE BREAKDOWN"> OVERHEAD LINE/CABLE BREAKDOWN </option>
+                                      <option value="UNSAFE INSTALLATION"> UNSAFE INSTALLATION </option>
+                                      <option value="NO SUPPLY - CONDUCTOR  SNAPPING"> NO SUPPLY - CONDUCTOR SNAPPING </option>
+                                      <option value="NO SUPPLY  - POLE DAMAGED"> NO SUPPLY - POLE DAMAGED </option>
+                                      <option value="NO SUPPLY - TOTAL AREA"> NO SUPPLY - TOTAL AREA </option>
+                                      <option value="NO SUPPLY - TRANSFORMER FAILURE"> NO SUPPLY - TRANSFORMER FAILURE </option>
+                                      <option value="NO SUPPLY - UG CABLE/RMU BREAKDOWN"> NO SUPPLY - UG CABLE/RMU BREAKDOWN </option>
+                                      <option value="NO SUPPLY - FEEDER TRIPPED"> NO SUPPLY - FEEDER TRIPPED </option>
+                                      <option value="NO SUPPLY - LINE FAULT"> NO SUPPLY - LINE FAULT </option>
+                                      <option value="NO SUPPLY - SCHEDULED OUTAGE"> NO SUPPLY - SCHEDULED OUTAGE </option>
+                                      <option value="NO SUPPLY - ONE OR TWO PHASE"> NO SUPPLY - ONE OR TWO PHASE </option>
+                                      <option value="NO SUPPLY - METER BURNT"> NO SUPPLY - METER BURNT </option>
+                                      <option value="NO SUPPLY - OVERLOAD"> NO SUPPLY - OVERLOAD </option>
+                                      <option value="NO SUPPLY - WP WIRE LOOSE/BROKEN"> NO SUPPLY - WP WIRE LOOSE/BROKEN </option>
+                                      <option value="NO SUPPLY - FROM SUBSTATION"> NO SUPPLY - FROM SUBSTATION </option>
+                                   </select>
+                                </div>
+
+                                <div class="row" id="third-2">
+                                    <label for="generic" class="hed">Generic Complaints</label>
+                                    <select class="form-control mb-3" name="generic" id="generic">
+                                      <option selected>Choose your Problem</option>
+                                      <option value="ACCIDENTS"> ACCIDENTS </option>
+                                      <option value="SAFETY"> SAFETY </option>
+                                      <option value="STREETLIGHT"> STREETLIGHT </option>
+                                   </select>
+                                </div>
+
+                                <div class="row" id="third-3">
+                                    <label for="line" class="hed">Line Related</label>
+                                    <select class="form-control mb-3" name="line" id="line">
+                                      <option selected>Choose your Problem</option>
+                                      <option value="TREE BRANCHES TOUCHING LINE"> TREE BRANCHES TOUCHING LINE </option>
+                                      <option value="LINE BUCHED/TWISTED"> LINE BUCHED/TWISTED </option>
+                                      <option value="LOOSE CONTACT"> LOOSE CONTACT </option>
+                                      <option value="RUSTED CROSS ARMS"> RUSTED CROSS ARMS </option>
+                                      <option value="LINE - DAMAGED INSULATOR"> LINE - DAMAGED INSULATOR </option>
+                                      <option value="LINE LOW LYING"> LINE LOW LYING </option>
+                                   </select>
+                                </div>
+
+                                <div class="row" id="third-4">
+                                    <label for="pole" class="hed">Pole Related</label>
+                                    <select class="form-control mb-3" name="pole" id="pole">
+                                      <option selected>Choose your Problem</option>
+                                      <option value="POLE RUSTED"> POLE RUSTED </option>
+                                      <option value="SHOCK FROM POLE"> SHOCK FROM POLE </option>
+                                      <option value="POLE LEANING"> POLE LEANING </option>
+                                      <option value="BROKEN  STAY WIRE /STRUT POLE"> BROKEN STAY WIRE /STRUT POLE </option>
+                                   </select>
+                                </div>
+
+                                <div class="row" id="third-5">
+                                    <label for="trans" class="hed">Transformer Related</label>
+                                    <select class="form-control mb-3" name="trans" id="trans">
+                                        <option selected>Choose your Problem</option>
+                                        <option value="TRANSFORMER CABLE/ LUGS BURNT"> TRANSFORMER CABLE/ LUGS BURNT </option>
+                                        <option value="TRANSFORMER OIL LEAKAGE"> TRANSFORMER OIL LEAKAGE </option>
+                                        <option value="TRANSFORMER SPARKING AT POLE"> TRANSFORMER SPARKING AT POLE </option>
+                                        <option value="TRANSFORMER SMOKE/FLAMES"> TRANSFORMER SMOKE/FLAMES </option>
+                                        <option value="FUSE CARRIER MISSING"> FUSE CARRIER MISSING </option>
+                                        <option value="TRANSFORMER - SPARK &amp; GLOW AT LOOSE POIN"> TRANSFORMER - SPARK &amp; GLOW AT LOOSE POIN </option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="tab-control">
+                                <a class="previous-button btn btn-info" role="button">Previous</a>
+                                <a class="next-button btn btn-info" role="button">Next</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4">
+                            <h3>Step - 4</h3>
+                            <div class="form-group">
+                                <label for="comments" class="">Comments/Questions(Optional)</label>
+                                <textarea class="form-control mb-3" name="comments" rows="5" name=""></textarea>
+                            </div>
+                            <div class="tab-control">
+                                <a class="previous-button btn btn-info" role="button">Previous</a>
+                                <button class="next-button btn btn-info" role="button" name="submit">Submit</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript">
+        $('.next-button').click(function() {
+            $('.nav-tabs > .active').next('li').find('a').trigger('click');
+            //trigger the click on the tab same like we click on the tab
+        });
+
+        $('.previous-button').click(function() {
+            $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+            //trigger the click on the tab same like we click on the tab
+        })
+        $('#third-1').hide();
+        $('#third-2').hide();
+        $('#third-3').hide();
+        $('#third-4').hide();
+        $('#third-5').hide();
+    </script>
+</body>
+
+</html>
